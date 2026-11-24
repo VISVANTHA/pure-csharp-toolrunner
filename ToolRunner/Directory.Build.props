@@ -1,0 +1,7 @@
+<Project>
+  <!--
+    Stops MSBuild from importing the repository's Directory.Build.props, which
+    configures the OrderKit corpus projects (target framework, language version),
+    not this harness.
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    The tool harness for "Tool Triggering (Synthetic Data)": the C# replacement for
+    the former run.sh runners, _skip.sh, tool_integration.py, full_check.py and
+    assert_nonzero.py.
+
+    It lives in its OWN repository (pure-csharp-toolrunner), not in the OrderKit corpus, and runs against it via REPO_ROOT. It is NOT part of OrderKit.sln and NOT inside the tool data folder:
+    a project manifest there would make the platform treat the folder as a project
+    of its own (see FullCheck rule 10). It references no NuGet package, because
+    NuGet is refused at this host's egress proxy.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ToolRunner</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
